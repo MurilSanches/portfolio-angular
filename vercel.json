@@ -4,7 +4,7 @@
   "outputDirectory": "dist/portfolio-2/browser",
   "functions": {
     "api/ssr.ts": {
-      "runtime": "nodejs22.x"
+      "runtime": "@vercel/node"
     }
   },
   "routes": [
