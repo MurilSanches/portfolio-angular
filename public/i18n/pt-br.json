@@ -1,0 +1,85 @@
+{
+  "nav": {
+    "about": "Sobre",
+    "projects": "Projetos",
+    "experience": "Experiência",
+    "education": "Educação",
+    "skills": "Habilidades",
+    "contact": "Contato",
+    "resume": "Currículo"
+  },
+  "hero": {
+    "title": "Murilo Sanches",
+    "subtitle": "Desenvolvedor Web",
+    "ctaProjects": "Ver projetos",
+    "ctaResume": "Abrir currículo"
+  },
+  "about": {
+    "title": "Sobre",
+    "description": "Desenvolvedor front-end com mais de 4 anos de experiência. Gosto de transformar requisitos complexos em interfaces rápidas, acessíveis e bem acabadas — com foco em performance, DX e entrega consistente."
+  },
+  "projects": {
+    "title": "Projetos",
+    "viewOnGithub": "Ver no GitHub",
+    "openRepo": "Abrir repositório",
+    "items": {
+      "next": {
+        "description": "Uma PoC para treinar Next.js, explorando SSR/CSR e integração com API em um fluxo simples e bem organizado."
+      },
+      "poizoni": {
+        "description": "Aplicativo para identificar animais peçonhentos e orientar o melhor caminho de atendimento e cuidados iniciais."
+      }
+    }
+  },
+  "experience": {
+    "title": "Experiência",
+    "present": "Atualmente",
+    "achievementsTitle": "Conquistas",
+    "items": {
+      "ciet": {
+        "description": "Atuação no desenvolvimento front-end com React/TypeScript em projetos de grande escala, com foco em qualidade, testes e evolução contínua da arquitetura.",
+        "keyPoints": [
+          "Construção de interfaces responsivas e dinâmicas com React, Next.js, TypeScript, Redux e Axios.",
+          "Criação e manutenção de testes unitários (Jest/Vitest) garantindo estabilidade e segurança em mudanças.",
+          "Apoio no planejamento técnico e acompanhamento do progresso, além de mentoria para estagiários."
+        ],
+        "achievements": [
+          "Migração de um projeto de Node.js 12 + CRA para Node.js 18 + Vite.",
+          "Concepção e entrega de uma aplicação usando Next.js e Tailwind CSS."
+        ]
+      },
+      "dextra": {
+        "description": "Experiência como desenvolvedor front-end em React em um dos projetos da Alelo, com colaboração próxima ao time e foco em entregas incrementais."
+      }
+    }
+  },
+  "education": {
+    "title": "Educação",
+    "items": {
+      "puc": {
+        "course": "Sistema de Informação"
+      },
+      "cotuca": {
+        "course": "Ensino médio e técnico em informática"
+      }
+    }
+  },
+  "skills": {
+    "title": "Habilidades"
+  },
+  "resume": {
+    "title": "Currículo",
+    "openPt": "Abrir currículo (PT)",
+    "openEn": "Open resume (EN)"
+  },
+  "contact": {
+    "title": "Contato",
+    "email": "E-mail",
+    "social": "Redes",
+    "mailto": {
+      "title": "Mailto",
+      "description": "Se preferir, clique no botão abaixo e me envie uma mensagem. Eu deixei um assunto sugerido para facilitar.",
+      "cta": "Enviar e-mail"
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "version": 2,
+  "buildCommand": "npm run build",
+  "outputDirectory": "dist/portfolio-2/browser",
+  "builds": [
+    {
+      "src": "api/ssr.ts",
+      "use": "@vercel/node"
+    },
+    {
+      "src": "dist/portfolio-2/browser/**",
+      "use": "@vercel/static"
+    }
+  ],
+  "routes": [
+    {
+      "handle": "filesystem"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/api/ssr"
+    }
+  ]
+}

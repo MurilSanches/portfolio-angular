@@ -1,0 +1,85 @@
+{
+  "nav": {
+    "about": "About",
+    "projects": "Projects",
+    "experience": "Experience",
+    "education": "Education",
+    "skills": "Skills",
+    "contact": "Contact",
+    "resume": "Resume"
+  },
+  "hero": {
+    "title": "Murilo Sanches",
+    "subtitle": "Web Developer",
+    "ctaProjects": "View projects",
+    "ctaResume": "Open resume"
+  },
+  "about": {
+    "title": "About",
+    "description": "Front-end developer with 4+ years of experience. I enjoy turning complex requirements into fast, accessible, polished interfaces — with a strong focus on performance, DX, and consistent delivery."
+  },
+  "projects": {
+    "title": "Projects",
+    "viewOnGithub": "View on GitHub",
+    "openRepo": "Open repository",
+    "items": {
+      "next": {
+        "description": "A PoC to practice Next.js, exploring SSR/CSR and API integration in a clean, simple flow."
+      },
+      "poizoni": {
+        "description": "Mobile app to identify venomous animals and guide the best next steps for care and treatment."
+      }
+    }
+  },
+  "experience": {
+    "title": "Experience",
+    "present": "Present",
+    "achievementsTitle": "Achievements",
+    "items": {
+      "ciet": {
+        "description": "Front-end development with React/TypeScript on large-scale projects, focused on quality, testing, and continuous architecture improvement.",
+        "keyPoints": [
+          "Built responsive and dynamic web interfaces using React, Next.js, TypeScript, Redux, and Axios.",
+          "Created and maintained unit tests (Jest/Vitest) to ensure stability and safe changes.",
+          "Supported technical planning and mentoring interns, helping the team deliver consistently."
+        ],
+        "achievements": [
+          "Migrated a project from Node.js 12 + CRA to Node.js 18 + Vite.",
+          "Designed and delivered an application using Next.js and Tailwind CSS."
+        ]
+      },
+      "dextra": {
+        "description": "Worked as a front-end developer using React on a project for Alelo, collaborating closely with the team and focusing on incremental delivery."
+      }
+    }
+  },
+  "education": {
+    "title": "Education",
+    "items": {
+      "puc": {
+        "course": "Information Systems"
+      },
+      "cotuca": {
+        "course": "High school + technical degree in IT"
+      }
+    }
+  },
+  "skills": {
+    "title": "Skills"
+  },
+  "resume": {
+    "title": "Resume",
+    "openPt": "Open resume (PT)",
+    "openEn": "Open resume (EN)"
+  },
+  "contact": {
+    "title": "Contact",
+    "email": "Email",
+    "social": "Social",
+    "mailto": {
+      "title": "Mailto",
+      "description": "If you prefer, click the button below and send me a message. I left a suggested subject to make it easier.",
+      "cta": "Send email"
+    }
+  }
+}
