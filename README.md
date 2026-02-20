@@ -80,7 +80,7 @@ Configuração SSR em `vercel.json` e `api/ssr.ts`.
 - **Auto-tracking**: Script injetado automaticamente
 - **Performance**: Web vitals e Core Web Vitals
 - **Privacy**: Sem cookies, GDPR compliant
-- **Config**: `"analytics": { "enabled": true }`
+- **Config**: Script em `src/index.html`
 
 ## 📁 Estrutura
 

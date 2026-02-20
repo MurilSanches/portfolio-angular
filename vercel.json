@@ -25,8 +25,5 @@
     "api/ssr.ts": {
       "runtime": "nodejs22.x"
     }
-  },
-  "analytics": {
-    "enabled": true
   }
 }
