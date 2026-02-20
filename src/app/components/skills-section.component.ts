@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, input } from '@angular/core';
 import { TranslateModule } from '@ngx-translate/core';
 
 import type { Skill } from '../data/skills';
@@ -12,7 +12,7 @@ import type { Skill } from '../data/skills';
       <h2 class="text-2xl font-semibold">{{ 'skills.title' | translate }}</h2>
 
       <div class="mt-8 flex flex-wrap gap-3">
-        @for (skill of skills; track skill.name) {
+        @for (skill of skills(); track skill.name) {
           <span
             class="rounded-full border border-black/10 bg-white/70 px-4 py-2 text-sm font-semibold shadow-soft dark:border-white/15 dark:bg-night-800/60"
             [style.borderColor]="skill.color"
@@ -22,8 +22,8 @@ import type { Skill } from '../data/skills';
         }
       </div>
     </section>
-  `
+  `,
 })
 export class SkillsSectionComponent {
-  @Input({ required: true }) skills!: Skill[];
+  readonly skills = input.required<Skill[]>();
 }

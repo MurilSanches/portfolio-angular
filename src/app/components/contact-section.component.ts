@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, input } from '@angular/core';
 import { TranslateModule } from '@ngx-translate/core';
 
 import type { SocialLink } from '../data/social';
@@ -15,11 +15,11 @@ import type { SocialLink } from '../data/social';
         <article class="rounded-2xl border border-black/10 bg-white/70 p-6 shadow-soft dark:border-white/15 dark:bg-night-800/60">
           <p class="text-sm font-semibold">{{ 'contact.email' | translate }}</p>
           <a class="mt-2 block text-sm text-ember-600 hover:underline dark:text-ember-500" [href]="mailto()">
-            {{ email }}
+            {{ email() }}
           </a>
           <p class="mt-6 text-sm font-semibold">{{ 'contact.social' | translate }}</p>
           <div class="mt-2 flex flex-wrap gap-3">
-            @for (s of socialLinks; track s.href) {
+            @for (s of socialLinks(); track s.href) {
               <a
                 class="rounded-md border border-black/10 bg-white/70 px-3 py-2 text-sm font-semibold shadow-soft hover:bg-white dark:border-white/15 dark:bg-night-900/60 dark:hover:bg-night-800"
                 [href]="s.href"
@@ -46,17 +46,17 @@ import type { SocialLink } from '../data/social';
         </article>
       </div>
     </section>
-  `
+  `,
 })
 export class ContactSectionComponent {
-  @Input({ required: true }) email!: string;
-  @Input({ required: true }) socialLinks!: SocialLink[];
+  readonly email = input.required<string>();
+  readonly socialLinks = input.required<SocialLink[]>();
 
   protected mailto(subject?: string, body?: string) {
     const qs = new URLSearchParams();
     if (subject) qs.set('subject', subject);
     if (body) qs.set('body', body);
     const suffix = qs.toString() ? `?${qs.toString()}` : '';
-    return `mailto:${this.email}${suffix}`;
+    return `mailto:${this.email()}${suffix}`;
   }
 }

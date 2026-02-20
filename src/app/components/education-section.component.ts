@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, input } from '@angular/core';
 import { TranslateModule } from '@ngx-translate/core';
 
 import type { EducationItem } from '../data/education';
@@ -12,7 +12,7 @@ import type { EducationItem } from '../data/education';
       <h2 class="text-2xl font-semibold">{{ 'education.title' | translate }}</h2>
 
       <div class="mt-8 grid gap-6 md:grid-cols-2">
-        @for (item of education; track item.institution + item.start) {
+        @for (item of education(); track item.institution + item.start) {
           <article class="rounded-2xl border border-black/10 bg-white/70 p-6 shadow-soft dark:border-white/15 dark:bg-night-800/60">
             <h3 class="text-base font-semibold">{{ item.institution }}</h3>
             <p class="mt-2 text-sm opacity-80">{{ item.courseKey | translate }}</p>
@@ -21,8 +21,8 @@ import type { EducationItem } from '../data/education';
         }
       </div>
     </section>
-  `
+  `,
 })
 export class EducationSectionComponent {
-  @Input({ required: true }) education!: EducationItem[];
+  readonly education = input.required<EducationItem[]>();
 }

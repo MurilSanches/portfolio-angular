@@ -16,5 +16,5 @@ export const SKILLS: Skill[] = [
   { name: 'AWS', color: '#FF9900' },
   { name: 'OpenShift', color: '#BA141A' },
   { name: 'MongoDB', color: '#68B33D' },
-  { name: 'Azure', color: '#008ADA' }
+  { name: 'Azure', color: '#008ADA' },
 ];

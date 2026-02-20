@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Component, input, output } from '@angular/core';
 import { TranslateModule } from '@ngx-translate/core';
 
 import type { AppLang } from '../services/i18n.service';
@@ -34,7 +34,7 @@ import type { AppLang } from '../services/i18n.service';
             type="button"
             class="rounded-md border border-black/10 px-3 py-1 text-sm dark:border-white/15"
             (click)="langChange.emit('pt-br')"
-            [class.opacity-50]="activeLang !== 'pt-br'"
+            [class.opacity-50]="activeLang() !== 'pt-br'"
           >
             PT
           </button>
@@ -42,18 +42,18 @@ import type { AppLang } from '../services/i18n.service';
             type="button"
             class="rounded-md border border-black/10 px-3 py-1 text-sm dark:border-white/15"
             (click)="langChange.emit('en')"
-            [class.opacity-50]="activeLang !== 'en'"
+            [class.opacity-50]="activeLang() !== 'en'"
           >
             EN
           </button>
         </div>
       </div>
     </header>
-  `
+  `,
 })
 export class SiteHeaderComponent {
-  @Input({ required: true }) activeLang!: AppLang;
+  readonly activeLang = input.required<AppLang>();
 
-  @Output() langChange = new EventEmitter<AppLang>();
-  @Output() toggleTheme = new EventEmitter<void>();
+  readonly langChange = output<AppLang>();
+  readonly toggleTheme = output<void>();
 }

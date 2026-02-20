@@ -1,6 +1,6 @@
+import { join } from 'node:path';
 import { AngularNodeAppEngine, writeResponseToNodeResponse } from '@angular/ssr/node';
 import express from 'express';
-import { join } from 'node:path';
 
 const browserDistFolder = join(process.cwd(), 'dist/portfolio-2/browser');
 
@@ -11,7 +11,7 @@ app.use(
   express.static(browserDistFolder, {
     maxAge: '1y',
     index: false,
-    redirect: false
+    redirect: false,
   })
 );
 

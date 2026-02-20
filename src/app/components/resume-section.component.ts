@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, input } from '@angular/core';
 import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
@@ -12,7 +12,7 @@ import { TranslateModule } from '@ngx-translate/core';
       <div class="mt-8 grid gap-4 md:grid-cols-2">
         <a
           class="rounded-2xl border border-black/10 bg-white/70 p-6 shadow-soft hover:bg-white dark:border-white/15 dark:bg-night-800/60 dark:hover:bg-night-800"
-          [href]="resumePtBrUrl"
+          [href]="resumePtBrUrl()"
           target="_blank"
           rel="noopener noreferrer"
         >
@@ -21,7 +21,7 @@ import { TranslateModule } from '@ngx-translate/core';
         </a>
         <a
           class="rounded-2xl border border-black/10 bg-white/70 p-6 shadow-soft hover:bg-white dark:border-white/15 dark:bg-night-800/60 dark:hover:bg-night-800"
-          [href]="resumeEnUrl"
+          [href]="resumeEnUrl()"
           target="_blank"
           rel="noopener noreferrer"
         >
@@ -30,9 +30,9 @@ import { TranslateModule } from '@ngx-translate/core';
         </a>
       </div>
     </section>
-  `
+  `,
 })
 export class ResumeSectionComponent {
-  @Input({ required: true }) resumePtBrUrl!: string;
-  @Input({ required: true }) resumeEnUrl!: string;
+  readonly resumePtBrUrl = input.required<string>();
+  readonly resumeEnUrl = input.required<string>();
 }

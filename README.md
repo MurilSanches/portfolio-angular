@@ -1,59 +1,139 @@
-# Portfolio2
+# Portfolio Angular 2.0
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.1.4.
+Projeto pessoal em Angular v21 com SSR, i18n (pt-br/en), e ferramentas modernas de desenvolvimento.
 
-## Development server
+## 🚀 Stack
 
-To start a local development server, run:
+- **Angular 21** com Zoneless change detection
+- **SSR** com Express para deploy Vercel
+- **Tailwind CSS** com tema customizado
+- **ngx-translate** para internacionalização
+- **TypeScript** com strict mode
+- **Bun** como package manager
+- **Biome** para linting e formatação
+- **Vitest** para testes (opcional)
 
-```bash
-ng serve
-```
-
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
-
-## Code scaffolding
-
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
-```bash
-ng generate component component-name
-```
-
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+## 📦 Scripts
 
 ```bash
-ng generate --help
+# Instalar dependências
+bun install
+
+# Servidor de desenvolvimento
+bun start
+
+# Build para produção
+bun build
+
+# Build com watch
+bun watch
+
+# Testes
+bun test
+
+# Servidor SSR local
+bun run serve:ssr:portfolio-2
+
+# Linting e formatação
+bun run lint          # Verificar lint
+bun run lint:fix       # Corrigir lint
+bun run format         # Formatar código
+bun run check          # Verificar lint + formato
+bun run check:fix      # Corrigir tudo
 ```
 
-## Building
+## 🛠️ Ferramentas Modernas
 
-To build the project run:
+### Bun
+- **Package manager ultra-rápido**: Instala dependências 10x mais rápido que npm
+- **Runtime TypeScript**: Executa TS sem compilação
+- **Built-in test runner**: Compatível com Vitest
+
+### Biome
+- **Linting**: Regras modernas para TypeScript/JavaScript
+- **Formatação**: Formatação consistente e rápida
+- **Organização de imports**: Automática
+- **Configuração**: `biome.json`
+
+## 🎨 Features do Angular 21
+
+- **Zoneless**: `provideZonelessChangeDetection()` para performance melhorada
+- **Input/Output Signals**: `input()` e `output()` para reatividade moderna
+- **@defer**: Lazy loading de componentes com placeholders
+- **Standalone Components**: Componentes independentes
+- **Hydration**: SSR com hidratação no cliente
+
+## 🌐 Deploy
+
+### Vercel (SSR)
+```bash
+# Deploy automático com vercel.json
+vercel --prod
+```
+
+Configuração SSR em `vercel.json` e `api/ssr.ts`.
+
+## 📁 Estrutura
+
+```
+src/
+├── app/
+│   ├── components/          # Standalone components
+│   ├── services/            # I18nService, ThemeService
+│   ├── data/               # Dados do portfólio
+│   └── app.ts              # Componente principal
+├── server.ts               # Express SSR
+└── styles.css              # Tailwind + custom
+public/
+├── i18n/                   # pt-br.json, en.json
+└── portfolio/              # Imagens dos projetos
+```
+
+## 🔧 Configurações
+
+### Biome
+- **Indentação**: 2 espaços
+- **Quotes**: Single quotes
+- **Semicolons**: Always
+- **Line width**: 100 chars
+- **Files**: TS, JS, JSON (ignora HTML)
+
+### Bun
+- **Lockfile**: `bun.lockb`
+- **Registry**: npm padrão
+- **Cache**: Automático
+
+## 🌍 Internacionalização
+
+- **ngx-translate** com HttpLoader customizado
+- **Arquivos**: `public/i18n/pt-br.json`, `en.json`
+- **Chaves**: Hierárquicas por seção
+- **SSR**: Funciona no servidor
+
+## 🎨 Tema
+
+- **Rustic/Terror**: Inspirado em Resident Evil 4
+- **Cores customizadas**: Ember, Blood, Night
+- **Dark mode**: Automático via preferência do sistema
+- **Toggle**: Via ThemeService
+
+## 📱 Performance
+
+- **Lazy loading**: @defer para sections pesadas
+- **Zoneless**: Menos overhead do change detection
+- **SSR**: Primeira pintura rápida
+- **Build otimizado**: Chunks separados
+
+## 🧪 Testes (Opcional)
 
 ```bash
-ng build
+# Configurar Vitest
+bun add -D vitest @vitest/ui
+
+# Executar testes
+bun test
 ```
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+---
 
-## Running unit tests
-
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+**Desenvolvido com ❤️ usando Angular 21 + Bun + Biome**

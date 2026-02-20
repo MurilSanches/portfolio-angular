@@ -1,9 +1,15 @@
-import { ApplicationConfig, importProvidersFrom, provideBrowserGlobalErrorListeners, Injectable } from '@angular/core';
+import { HttpClient, provideHttpClient } from '@angular/common/http';
+import {
+  type ApplicationConfig,
+  Injectable,
+  importProvidersFrom,
+  provideBrowserGlobalErrorListeners,
+  provideZonelessChangeDetection,
+} from '@angular/core';
 import { provideClientHydration, withEventReplay } from '@angular/platform-browser';
-import { provideHttpClient, HttpClient } from '@angular/common/http';
 
-import { TranslateLoader, TranslateModule, TranslationObject } from '@ngx-translate/core';
-import { Observable, of } from 'rxjs';
+import { TranslateLoader, TranslateModule, type TranslationObject } from '@ngx-translate/core';
+import { type Observable, of } from 'rxjs';
 
 @Injectable()
 export class AppTranslateHttpLoader implements TranslateLoader {
@@ -24,6 +30,7 @@ export function httpLoaderFactory(http: HttpClient) {
 export const appConfig: ApplicationConfig = {
   providers: [
     provideBrowserGlobalErrorListeners(),
+    provideZonelessChangeDetection(),
     provideClientHydration(withEventReplay()),
     provideHttpClient(),
     importProvidersFrom(
@@ -32,9 +39,9 @@ export const appConfig: ApplicationConfig = {
         loader: {
           provide: TranslateLoader,
           useFactory: httpLoaderFactory,
-          deps: [HttpClient]
-        }
+          deps: [HttpClient],
+        },
       })
-    )
-  ]
+    ),
+  ],
 };

@@ -18,18 +18,18 @@ export const EXPERIENCES: Experience[] = [
     keyPointsKeys: [
       'experience.items.ciet.keyPoints.0',
       'experience.items.ciet.keyPoints.1',
-      'experience.items.ciet.keyPoints.2'
+      'experience.items.ciet.keyPoints.2',
     ],
     achievementsKeys: [
       'experience.items.ciet.achievements.0',
-      'experience.items.ciet.achievements.1'
-    ]
+      'experience.items.ciet.achievements.1',
+    ],
   },
   {
     position: 'Estagiário',
     company: 'Dextra',
     start: 'Janeiro de 2021',
     end: 'Dezembro de 2021',
-    descriptionKey: 'experience.items.dextra.description'
-  }
+    descriptionKey: 'experience.items.dextra.description',
+  },
 ];

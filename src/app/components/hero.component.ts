@@ -46,6 +46,6 @@ import { TranslateModule } from '@ngx-translate/core';
 
       <div class="pointer-events-none absolute inset-x-0 bottom-0 h-px bg-gradient-to-r from-transparent via-black/10 to-transparent dark:via-white/10"></div>
     </section>
-  `
+  `,
 })
 export class HeroComponent {}

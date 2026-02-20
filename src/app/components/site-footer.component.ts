@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, input } from '@angular/core';
 
 @Component({
   selector: 'app-site-footer',
@@ -6,11 +6,11 @@ import { Component, Input } from '@angular/core';
   template: `
     <footer class="border-t border-black/5 py-10 text-center text-sm opacity-70 dark:border-white/10">
       <div class="mx-auto max-w-6xl px-4">
-        <p>© {{ year }} Murilo Sanches</p>
+        <p>© {{ year() }} Murilo Sanches</p>
       </div>
     </footer>
-  `
+  `,
 })
 export class SiteFooterComponent {
-  @Input({ required: true }) year!: number;
+  readonly year = input.required<number>();
 }

@@ -10,6 +10,6 @@ import { TranslateModule } from '@ngx-translate/core';
       <h2 class="text-2xl font-semibold">{{ 'about.title' | translate }}</h2>
       <p class="mt-3 max-w-3xl opacity-80">{{ 'about.description' | translate }}</p>
     </section>
-  `
+  `,
 })
 export class AboutSectionComponent {}

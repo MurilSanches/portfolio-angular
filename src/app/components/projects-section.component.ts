@@ -1,4 +1,4 @@
-import { Component, Input, signal } from '@angular/core';
+import { Component, input, signal } from '@angular/core';
 import { TranslateModule } from '@ngx-translate/core';
 
 import type { Project } from '../data/projects';
@@ -13,7 +13,7 @@ import type { Project } from '../data/projects';
         <h2 class="text-2xl font-semibold">{{ 'projects.title' | translate }}</h2>
         <a
           class="text-sm font-semibold text-ember-600 hover:underline dark:text-ember-500"
-          [href]="githubUrl"
+          [href]="githubUrl()"
           target="_blank"
           rel="noopener noreferrer"
         >
@@ -22,7 +22,7 @@ import type { Project } from '../data/projects';
       </div>
 
       <div class="mt-8 grid gap-6 md:grid-cols-2">
-        @for (project of projects; track project.name) {
+        @for (project of projects(); track project.name) {
           <article class="group overflow-hidden rounded-2xl border border-black/10 bg-white/70 shadow-soft dark:border-white/15 dark:bg-night-800/60">
             <div class="relative">
               <img
@@ -80,11 +80,11 @@ import type { Project } from '../data/projects';
         }
       </div>
     </section>
-  `
+  `,
 })
 export class ProjectsSectionComponent {
-  @Input({ required: true }) projects!: Project[];
-  @Input({ required: true }) githubUrl!: string;
+  readonly projects = input.required<Project[]>();
+  readonly githubUrl = input.required<string>();
 
   protected readonly selectedImageByProjectName = signal<Record<string, string>>({});
 
@@ -96,7 +96,7 @@ export class ProjectsSectionComponent {
   protected selectImage(project: Project, img: string) {
     this.selectedImageByProjectName.update((curr) => ({
       ...curr,
-      [project.name]: img
+      [project.name]: img,
     }));
   }
 }
