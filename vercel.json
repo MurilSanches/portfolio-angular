@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "buildCommand": "npm run build",
+  "buildCommand": "bun run build",
   "outputDirectory": "dist/portfolio-2/browser",
   "builds": [
     {
@@ -20,5 +20,13 @@
       "src": "/(.*)",
       "dest": "/api/ssr"
     }
-  ]
+  ],
+  "functions": {
+    "api/ssr.ts": {
+      "runtime": "nodejs22.x"
+    }
+  },
+  "analytics": {
+    "enabled": true
+  }
 }

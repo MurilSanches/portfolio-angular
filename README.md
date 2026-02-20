@@ -40,6 +40,9 @@ bun run lint:fix       # Corrigir lint
 bun run format         # Formatar código
 bun run check          # Verificar lint + formato
 bun run check:fix      # Corrigir tudo
+
+# Deploy
+bun run deploy         # Deploy para Vercel
 ```
 
 ## 🛠️ Ferramentas Modernas
@@ -68,10 +71,16 @@ bun run check:fix      # Corrigir tudo
 ### Vercel (SSR)
 ```bash
 # Deploy automático com vercel.json
-vercel --prod
+bun run deploy
 ```
 
 Configuração SSR em `vercel.json` e `api/ssr.ts`.
+
+### Vercel Analytics
+- **Auto-tracking**: Script injetado automaticamente
+- **Performance**: Web vitals e Core Web Vitals
+- **Privacy**: Sem cookies, GDPR compliant
+- **Config**: `"analytics": { "enabled": true }`
 
 ## 📁 Estrutura
 

@@ -12,7 +12,8 @@
     "lint:fix": "biome lint --write .",
     "format": "biome format --write .",
     "check": "biome check .",
-    "check:fix": "biome check --write ."
+    "check:fix": "biome check --write .",
+    "deploy": "vercel --prod"
   },
   "prettier": {
     "printWidth": 100,
@@ -42,6 +43,7 @@
     "@angular/ssr": "^21.1.4",
     "@ngx-translate/core": "^17.0.0",
     "@ngx-translate/http-loader": "^17.0.0",
+    "@vercel/analytics": "^1.6.1",
     "express": "^5.1.0",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0"
