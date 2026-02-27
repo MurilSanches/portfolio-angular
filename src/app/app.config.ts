@@ -7,6 +7,7 @@ import {
   provideZonelessChangeDetection,
 } from '@angular/core';
 import { provideClientHydration, withEventReplay } from '@angular/platform-browser';
+import { provideRouter } from '@angular/router';
 
 import { TranslateLoader, TranslateModule, type TranslationObject } from '@ngx-translate/core';
 import { type Observable, of } from 'rxjs';
@@ -31,6 +32,7 @@ export const appConfig: ApplicationConfig = {
   providers: [
     provideBrowserGlobalErrorListeners(),
     provideZonelessChangeDetection(),
+    provideRouter([]),
     provideClientHydration(withEventReplay()),
     provideHttpClient(),
     importProvidersFrom(
