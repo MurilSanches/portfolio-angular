@@ -1,4 +1,4 @@
 export const RESUME = {
-  ptBr: '/resume/resume.pdf',
-  en: '/resume/english_resume.pdf',
+  ptBr: '/resume/curriculo%202.0.pdf',
+  en: '/resume/resume%202.0.pdf',
 };

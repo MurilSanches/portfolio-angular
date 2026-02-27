@@ -10,8 +10,8 @@
   },
   "hero": {
     "title": "Murilo Sanches",
-    "role": "Desenvolvedor Front-end",
-    "subtitle": "Transformo requisitos complexos em interfaces rápidas, acessíveis e bem acabadas.",
+    "role": "Desenvolvedor Full Stack",
+    "subtitle": "Construo soluções de ponta a ponta — de interfaces performáticas a APIs backend escaláveis.",
     "badge": "Aberto a oportunidades",
     "ctaProjects": "Ver projetos",
     "ctaContact": "Entre em contato",
@@ -23,7 +23,7 @@
   },
   "about": {
     "title": "Sobre",
-    "description": "Desenvolvedor front-end com mais de 4 anos de experiência. Gosto de transformar requisitos complexos em interfaces rápidas, acessíveis e bem acabadas — com foco em performance, DX e entrega consistente.",
+    "description": "Desenvolvedor Full Stack com mais de 5 anos de experiência, especializado em React/Next.js e Java (Spring Boot). Construo soluções completas com foco em performance, código limpo e entrega consistente — com experiência sólida em metodologias ágeis e mentoria técnica.",
     "statsYears": "Anos de experiência",
     "statsProjects": "Repositórios públicos",
     "statsTech": "Tecnologias"
@@ -65,19 +65,32 @@
     "achievementsTitle": "Conquistas",
     "items": {
       "ciet": {
-        "description": "Atuação no desenvolvimento front-end com React/TypeScript em projetos de grande escala, com foco em qualidade, testes e evolução contínua da arquitetura.",
+        "description": "Liderança técnica no desenvolvimento full stack com React, Next.js e Spring Boot, elevando a qualidade do código e a eficiência da equipe.",
         "keyPoints": [
-          "Construção de interfaces responsivas e dinâmicas com React, Next.js, TypeScript, Redux e Axios.",
-          "Criação e manutenção de testes unitários (Jest/Vitest) garantindo estabilidade e segurança em mudanças.",
-          "Apoio no planejamento técnico e acompanhamento do progresso, além de mentoria para estagiários."
+          "Liderou o desenvolvimento full stack com React, Next.js e Spring Boot, melhorando qualidade e eficiência da equipe.",
+          "Implementou a migração do Spring Boot 2 para versão 3, mitigando vulnerabilidades críticas de segurança.",
+          "Mentorou estagiários, acelerando o aprendizado e reduzindo o tempo de entrega da equipe em 20%."
         ],
         "achievements": [
-          "Migração de um projeto de Node.js 12 + CRA para Node.js 18 + Vite.",
-          "Concepção e entrega de uma aplicação usando Next.js e Tailwind CSS."
+          "Performance do backend melhorada em 30% após a migração para Spring Boot 3."
+        ]
+      },
+      "ciet1": {
+        "description": "Modernização arquitetural de sistemas legados e entrega de interfaces dinâmicas com Next.js e Tailwind CSS.",
+        "achievements": [
+          "Migrou projetos legados de Node.js 12 + CRA para Node.js 18 + Vite, resultando em builds 40% mais rápidos.",
+          "Planejou e entregou interfaces dinâmicas utilizando Next.js e Tailwind CSS."
+        ]
+      },
+      "ciet2": {
+        "description": "Desenvolvimento de interfaces responsivas e dinâmicas com foco em alta fidelidade ao design e testes unitários abrangentes.",
+        "keyPoints": [
+          "Construção de interfaces responsivas e dinâmicas com foco em alta fidelidade ao design.",
+          "Implementação de testes unitários abrangentes com Jest e Vitest, garantindo a estabilidade das aplicações."
         ]
       },
       "dextra": {
-        "description": "Experiência como desenvolvedor front-end em React em um dos projetos da Alelo, com colaboração próxima ao time e foco em entregas incrementais."
+        "description": "Desenvolvimento frontend com React JS para grandes clientes do setor financeiro (Alelo), contribuindo para projetos de grande escala e complexidade em ambiente ágil."
       }
     }
   },
