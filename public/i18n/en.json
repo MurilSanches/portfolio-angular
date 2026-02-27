@@ -10,13 +10,23 @@
   },
   "hero": {
     "title": "Murilo Sanches",
-    "subtitle": "Web Developer",
+    "role": "Front-end Developer",
+    "subtitle": "I turn complex requirements into fast, accessible, and polished interfaces.",
+    "badge": "Open to opportunities",
     "ctaProjects": "View projects",
-    "ctaResume": "Open resume"
+    "ctaContact": "Get in touch",
+    "ctaResume": "Open resume",
+    "cardTitle": "About me",
+    "statsYears": "years of experience",
+    "statsProjects": "public repos",
+    "statsTech": "technologies"
   },
   "about": {
     "title": "About",
-    "description": "Front-end developer with 4+ years of experience. I enjoy turning complex requirements into fast, accessible, polished interfaces — with a strong focus on performance, DX, and consistent delivery."
+    "description": "Front-end developer with 4+ years of experience. I enjoy turning complex requirements into fast, accessible, polished interfaces — with a strong focus on performance, DX, and consistent delivery.",
+    "statsYears": "Years of experience",
+    "statsProjects": "Public repositories",
+    "statsTech": "Technologies"
   },
   "projects": {
     "title": "Projects",
@@ -28,6 +38,24 @@
       },
       "poizoni": {
         "description": "Mobile app to identify venomous animals and guide the best next steps for care and treatment."
+      },
+      "ecommerceCar": {
+        "description": "Front-end of an e-commerce platform for selling automotive parts, built with TypeScript."
+      },
+      "newsGamification": {
+        "description": "Front-end for a news platform with gamification mechanics to engage readers through points and achievements."
+      },
+      "portfolioSvelte": {
+        "description": "Personal portfolio built with Svelte, exploring the framework's reactivity and lightweight bundle."
+      },
+      "solarSystem": {
+        "description": "Interactive 3D solar system simulation rendered on HTML5 Canvas using JavaScript."
+      },
+      "blockchain": {
+        "description": "Web 3.0 application integrating React with blockchain, allowing crypto transactions via MetaMask."
+      },
+      "musicPlayer": {
+        "description": "Music player integrated with the Spotify API, featuring playlist management and playback controls."
       }
     }
   },

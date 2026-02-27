@@ -10,13 +10,23 @@
   },
   "hero": {
     "title": "Murilo Sanches",
-    "subtitle": "Desenvolvedor Web",
+    "role": "Desenvolvedor Front-end",
+    "subtitle": "Transformo requisitos complexos em interfaces rápidas, acessíveis e bem acabadas.",
+    "badge": "Aberto a oportunidades",
     "ctaProjects": "Ver projetos",
-    "ctaResume": "Abrir currículo"
+    "ctaContact": "Entre em contato",
+    "ctaResume": "Abrir currículo",
+    "cardTitle": "Sobre mim",
+    "statsYears": "anos de experiência",
+    "statsProjects": "repositórios públicos",
+    "statsTech": "tecnologias"
   },
   "about": {
     "title": "Sobre",
-    "description": "Desenvolvedor front-end com mais de 4 anos de experiência. Gosto de transformar requisitos complexos em interfaces rápidas, acessíveis e bem acabadas — com foco em performance, DX e entrega consistente."
+    "description": "Desenvolvedor front-end com mais de 4 anos de experiência. Gosto de transformar requisitos complexos em interfaces rápidas, acessíveis e bem acabadas — com foco em performance, DX e entrega consistente.",
+    "statsYears": "Anos de experiência",
+    "statsProjects": "Repositórios públicos",
+    "statsTech": "Tecnologias"
   },
   "projects": {
     "title": "Projetos",
@@ -28,6 +38,24 @@
       },
       "poizoni": {
         "description": "Aplicativo para identificar animais peçonhentos e orientar o melhor caminho de atendimento e cuidados iniciais."
+      },
+      "ecommerceCar": {
+        "description": "Front-end de uma plataforma de e-commerce para venda de peças automotivas, construído com TypeScript."
+      },
+      "newsGamification": {
+        "description": "Front-end de uma plataforma de notícias com mecânicas de gamificação para engajar leitores com pontos e conquistas."
+      },
+      "portfolioSvelte": {
+        "description": "Portfólio pessoal construído com Svelte, explorando a reatividade do framework e seu bundle leve."
+      },
+      "solarSystem": {
+        "description": "Simulação interativa do sistema solar em 3D renderizada em HTML5 Canvas usando JavaScript."
+      },
+      "blockchain": {
+        "description": "Aplicação Web 3.0 integrando React com blockchain, permitindo transações de criptomoedas via MetaMask."
+      },
+      "musicPlayer": {
+        "description": "Player de música integrado com a API do Spotify, com gerenciamento de playlists e controles de reprodução."
       }
     }
   },
