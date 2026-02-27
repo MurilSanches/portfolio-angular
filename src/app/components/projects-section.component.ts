@@ -10,7 +10,10 @@ import type { Project } from '../data/projects';
   template: `
     <section id="projects" class="mx-auto max-w-6xl px-4 py-16">
       <div class="flex items-end justify-between gap-4">
-        <h2 class="text-2xl font-semibold">{{ 'projects.title' | translate }}</h2>
+        <div>
+          <h2 class="text-2xl font-semibold">{{ 'projects.title' | translate }}</h2>
+          <p class="mt-0.5 font-mono text-xs tracking-widest opacity-30">{{ 'projects.label' | translate }}</p>
+        </div>
         <a
           class="text-sm font-semibold text-ember-600 hover:underline dark:text-ember-500"
           [href]="githubUrl()"

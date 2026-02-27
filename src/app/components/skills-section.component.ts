@@ -10,6 +10,7 @@ import type { Skill } from '../data/skills';
   template: `
     <section id="skills" class="mx-auto max-w-6xl px-4 py-16">
       <h2 class="text-2xl font-semibold">{{ 'skills.title' | translate }}</h2>
+      <p class="mt-0.5 font-mono text-xs tracking-widest opacity-30">{{ 'skills.label' | translate }}</p>
 
       <div class="mt-8 flex flex-wrap gap-2.5">
         @for (skill of skills(); track skill.name) {

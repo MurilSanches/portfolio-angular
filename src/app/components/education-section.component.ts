@@ -10,6 +10,7 @@ import type { EducationItem } from '../data/education';
   template: `
     <section id="education" class="mx-auto max-w-6xl px-4 py-16">
       <h2 class="text-2xl font-semibold">{{ 'education.title' | translate }}</h2>
+      <p class="mt-0.5 font-mono text-xs tracking-widest opacity-30">{{ 'education.label' | translate }}</p>
 
       <div class="mt-8 grid gap-6 md:grid-cols-2">
         @for (item of education(); track item.institution + item.start) {

@@ -16,13 +16,14 @@
     "ctaProjects": "Ver projetos",
     "ctaContact": "Entre em contato",
     "ctaResume": "Abrir currículo",
-    "cardTitle": "Sobre mim",
+    "cardTitle": "// Ficha Pessoal",
     "statsYears": "anos de experiência",
     "statsProjects": "repositórios públicos",
     "statsTech": "tecnologias"
   },
   "about": {
     "title": "Sobre",
+    "label": "// Operativo de Campo",
     "description": "Desenvolvedor Full Stack com mais de 5 anos de experiência, especializado em React/Next.js e Java (Spring Boot). Construo soluções completas com foco em performance, código limpo e entrega consistente — com experiência sólida em metodologias ágeis e mentoria técnica.",
     "statsYears": "Anos de experiência",
     "statsProjects": "Repositórios públicos",
@@ -30,6 +31,7 @@
   },
   "projects": {
     "title": "Projetos",
+    "label": "// Operações Classificadas",
     "viewOnGithub": "Ver no GitHub",
     "openRepo": "Abrir repositório",
     "items": {
@@ -61,6 +63,7 @@
   },
   "experience": {
     "title": "Experiência",
+    "label": "// Registros de Missão",
     "present": "Atualmente",
     "achievementsTitle": "Conquistas",
     "items": {
@@ -96,6 +99,7 @@
   },
   "education": {
     "title": "Educação",
+    "label": "// Registros de Treinamento",
     "items": {
       "puc": {
         "course": "Sistema de Informação"
@@ -106,7 +110,8 @@
     }
   },
   "skills": {
-    "title": "Habilidades"
+    "title": "Habilidades",
+    "label": "// Arsenal de Combate"
   },
   "resume": {
     "title": "Currículo",
@@ -115,6 +120,7 @@
   },
   "contact": {
     "title": "Contato",
+    "label": "// Estabelecer Contato",
     "email": "E-mail",
     "social": "Redes",
     "mailto": {

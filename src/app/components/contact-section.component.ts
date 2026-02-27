@@ -10,6 +10,7 @@ import type { SocialLink } from '../data/social';
   template: `
     <section id="contact" class="mx-auto max-w-6xl px-4 py-16">
       <h2 class="text-2xl font-semibold">{{ 'contact.title' | translate }}</h2>
+      <p class="mt-0.5 font-mono text-xs tracking-widest opacity-30">{{ 'contact.label' | translate }}</p>
 
       <div class="mt-8 grid gap-6 md:grid-cols-2">
         <article class="rounded-2xl border border-black/10 bg-white/70 p-6 shadow-soft dark:border-white/15 dark:bg-night-800/60">

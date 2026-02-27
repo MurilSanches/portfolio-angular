@@ -10,6 +10,7 @@ import type { Experience } from '../data/experience';
   template: `
     <section id="experience" class="mx-auto max-w-6xl px-4 py-16">
       <h2 class="text-2xl font-semibold">{{ 'experience.title' | translate }}</h2>
+      <p class="mt-0.5 font-mono text-xs tracking-widest opacity-30">{{ 'experience.label' | translate }}</p>
 
       <div class="mt-8">
         <ol class="relative border-s border-black/10 ps-6 dark:border-white/15">

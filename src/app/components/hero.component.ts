@@ -10,6 +10,7 @@ import { TranslateModule } from '@ngx-translate/core';
       <!-- Decorative blobs -->
       <div class="pointer-events-none absolute -top-24 left-1/4 h-72 w-72 rounded-full bg-ember-500/10 blur-3xl dark:bg-ember-500/5"></div>
       <div class="pointer-events-none absolute -top-10 right-1/4 h-56 w-56 rounded-full bg-blue-400/10 blur-3xl dark:bg-blue-400/5"></div>
+      <div class="pointer-events-none absolute -bottom-16 right-0 h-80 w-80 rounded-full bg-blood-700/5 blur-3xl dark:bg-blood-700/10"></div>
 
       <div class="mx-auto grid max-w-6xl gap-10 px-4 py-20 md:grid-cols-12 md:py-28">
         <div class="md:col-span-7">
@@ -56,20 +57,20 @@ import { TranslateModule } from '@ngx-translate/core';
 
         <div class="md:col-span-5">
           <div class="rounded-2xl border border-black/10 bg-white/60 p-6 shadow-soft dark:border-white/15 dark:bg-night-800/60">
-            <p class="mb-4 text-xs font-semibold uppercase tracking-widest opacity-50">{{ 'hero.cardTitle' | translate }}</p>
+            <p class="mb-4 font-mono text-xs font-semibold uppercase tracking-widest opacity-50">{{ 'hero.cardTitle' | translate }}</p>
             <p class="text-sm leading-relaxed opacity-80">{{ 'about.description' | translate }}</p>
 
             <div class="mt-5 grid grid-cols-3 gap-3 border-t border-black/5 pt-5 dark:border-white/10">
               <div>
-                <p class="text-xl font-bold">4+</p>
+                <p class="text-xl font-bold">5+</p>
                 <p class="text-xs opacity-60">{{ 'hero.statsYears' | translate }}</p>
               </div>
               <div>
-                <p class="text-xl font-bold">8+</p>
+                <p class="text-xl font-bold">25+</p>
                 <p class="text-xs opacity-60">{{ 'hero.statsProjects' | translate }}</p>
               </div>
               <div>
-                <p class="text-xl font-bold">13+</p>
+                <p class="text-xl font-bold">17+</p>
                 <p class="text-xs opacity-60">{{ 'hero.statsTech' | translate }}</p>
               </div>
             </div>
