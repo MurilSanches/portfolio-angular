@@ -46,6 +46,13 @@ import type { AppLang } from '../services/i18n.service';
           >
             EN
           </button>
+          <a
+            href="/v1"
+            class="rounded-md border border-ember-500/40 px-3 py-1 text-sm text-ember-400 transition-colors hover:border-ember-400 hover:text-ember-300"
+            title="Ver Portfolio v1"
+          >
+            ← v1
+          </a>
         </div>
       </div>
     </header>
