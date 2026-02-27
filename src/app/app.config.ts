@@ -19,7 +19,7 @@ export class AppTranslateHttpLoader implements TranslateLoader {
     if (typeof window === 'undefined') {
       return of({});
     }
-    return this.http.get<TranslationObject>(`/i18n/${lang}.json`);
+    return this.http.get<TranslationObject>(`i18n/${lang}.json`);
   }
 }
 
