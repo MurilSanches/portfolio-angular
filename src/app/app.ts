@@ -1,4 +1,4 @@
-import { Component, signal } from '@angular/core';
+import { Component, computed, signal } from '@angular/core';
 import { AboutSectionComponent } from './components/about-section.component';
 import { ContactSectionComponent } from './components/contact-section.component';
 import { EducationSectionComponent } from './components/education-section.component';
@@ -66,14 +66,14 @@ import { ThemeService } from './services/theme.service';
         }
         <app-education-section [education]="education" />
         <app-skills-section [skills]="skills" />
-        <app-resume-section [resumePtBrUrl]="resumePtBrUrl" [resumeEnUrl]="resumeEnUrl" />
+        <app-resume-section [resumeUrl]="currentResumeUrl()" />
         <app-contact-section
           [email]="email"
           [socialLinks]="socialLinks"
         />
       </main>
 
-      <app-site-footer [year]="currentYear()" />
+      <app-site-footer [year]="currentYear()" [socialLinks]="socialLinks" />
     </div>
   `,
   styleUrl: './app.css',
@@ -89,8 +89,9 @@ export class App {
   protected readonly socialLinks = SOCIAL_LINKS;
 
   protected readonly email = 'murilosanchesp@gmail.com';
-  protected readonly resumePtBrUrl = RESUME.ptBr;
-  protected readonly resumeEnUrl = RESUME.en;
+  protected readonly currentResumeUrl = computed(() =>
+    this.i18n.lang() === 'pt-br' ? RESUME.ptBr : RESUME.en
+  );
 
   constructor(
     protected readonly i18n: I18nService,

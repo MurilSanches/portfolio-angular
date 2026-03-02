@@ -115,8 +115,7 @@
   },
   "resume": {
     "title": "Currículo",
-    "openPt": "Abrir currículo (PT)",
-    "openEn": "Open resume (EN)"
+    "download": "Baixar currículo"
   },
   "contact": {
     "title": "Contato",

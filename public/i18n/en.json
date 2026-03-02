@@ -115,8 +115,7 @@
   },
   "resume": {
     "title": "Resume",
-    "openPt": "Open resume (PT)",
-    "openEn": "Open resume (EN)"
+    "download": "Download resume"
   },
   "contact": {
     "title": "Contact",
