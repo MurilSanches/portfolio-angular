@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { isPlatformBrowser } from '@angular/common';
+import { Component, OnDestroy, OnInit, PLATFORM_ID, inject, signal } from '@angular/core';
 import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
@@ -7,10 +8,19 @@ import { TranslateModule } from '@ngx-translate/core';
   imports: [TranslateModule],
   template: `
     <section class="relative overflow-hidden" aria-label="Hero">
-      <!-- Decorative blobs -->
-      <div class="pointer-events-none absolute -top-24 left-1/4 h-72 w-72 rounded-full bg-ember-500/10 blur-3xl dark:bg-ember-500/5"></div>
-      <div class="pointer-events-none absolute -top-10 right-1/4 h-56 w-56 rounded-full bg-blue-400/10 blur-3xl dark:bg-blue-400/5"></div>
-      <div class="pointer-events-none absolute -bottom-16 right-0 h-80 w-80 rounded-full bg-blood-700/5 blur-3xl dark:bg-blood-700/10"></div>
+      <!-- Decorative blobs with parallax -->
+      <div
+        class="pointer-events-none absolute -top-24 left-1/4 h-72 w-72 rounded-full bg-ember-500/10 blur-3xl dark:bg-ember-500/5"
+        [style.transform]="'translateY(' + scrollY() * 0.35 + 'px)'"
+      ></div>
+      <div
+        class="pointer-events-none absolute -top-10 right-1/4 h-56 w-56 rounded-full bg-blue-400/10 blur-3xl dark:bg-blue-400/5"
+        [style.transform]="'translateY(' + scrollY() * 0.55 + 'px)'"
+      ></div>
+      <div
+        class="pointer-events-none absolute -bottom-16 right-0 h-80 w-80 rounded-full bg-blood-700/5 blur-3xl dark:bg-blood-700/10"
+        [style.transform]="'translateY(' + scrollY() * -0.25 + 'px)'"
+      ></div>
 
       <div class="mx-auto grid max-w-6xl gap-10 px-4 py-20 md:grid-cols-12 md:py-28">
         <div class="md:col-span-7">
@@ -82,4 +92,23 @@ import { TranslateModule } from '@ngx-translate/core';
     </section>
   `,
 })
-export class HeroComponent {}
+export class HeroComponent implements OnInit, OnDestroy {
+  private readonly platformId = inject(PLATFORM_ID);
+  protected readonly scrollY = signal(0);
+
+  private readonly handleScroll = () => {
+    this.scrollY.set(window.scrollY);
+  };
+
+  ngOnInit() {
+    if (isPlatformBrowser(this.platformId)) {
+      window.addEventListener('scroll', this.handleScroll, { passive: true });
+    }
+  }
+
+  ngOnDestroy() {
+    if (isPlatformBrowser(this.platformId)) {
+      window.removeEventListener('scroll', this.handleScroll);
+    }
+  }
+}
