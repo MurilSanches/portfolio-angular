@@ -2,20 +2,23 @@ import { Component, input } from '@angular/core';
 import { TranslateModule } from '@ngx-translate/core';
 
 import type { Experience } from '../data/experience';
+import { RevealDirective } from '../directives/reveal.directive';
 
 @Component({
   selector: 'app-experience-section',
   standalone: true,
-  imports: [TranslateModule],
+  imports: [TranslateModule, RevealDirective],
   template: `
     <section id="experience" class="mx-auto max-w-6xl px-4 py-16">
-      <h2 class="text-2xl font-semibold">{{ 'experience.title' | translate }}</h2>
-      <p class="mt-0.5 font-mono text-xs tracking-widest opacity-30">{{ 'experience.label' | translate }}</p>
+      <div appReveal>
+        <h2 class="text-2xl font-semibold">{{ 'experience.title' | translate }}</h2>
+        <p class="mt-0.5 font-mono text-xs tracking-widest opacity-30">{{ 'experience.label' | translate }}</p>
+      </div>
 
       <div class="mt-8">
         <ol class="relative border-s border-black/10 ps-6 dark:border-white/15">
-          @for (item of experiences(); track item.company + item.position) {
-            <li class="relative pb-10 last:pb-0">
+          @for (item of experiences(); track item.company + item.position; let i = $index) {
+            <li appReveal [delay]="i * 120" class="relative pb-10 last:pb-0">
               <span class="absolute -start-[9px] mt-1.5 h-4 w-4 rounded-full border border-black/20 bg-ember-500 shadow-[0_0_18px_rgba(217,119,6,0.35)] dark:border-white/20"></span>
 
               <article class="rounded-2xl border border-black/10 bg-white/70 p-6 shadow-soft dark:border-white/15 dark:bg-night-800/60">

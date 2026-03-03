@@ -2,14 +2,15 @@ import { Component, computed, input, signal } from '@angular/core';
 import { TranslateModule } from '@ngx-translate/core';
 
 import type { Project } from '../data/projects';
+import { RevealDirective } from '../directives/reveal.directive';
 
 @Component({
   selector: 'app-projects-section',
   standalone: true,
-  imports: [TranslateModule],
+  imports: [TranslateModule, RevealDirective],
   template: `
     <section id="projects" class="mx-auto max-w-6xl px-4 py-16">
-      <div class="flex items-end justify-between gap-4">
+      <div appReveal class="flex items-end justify-between gap-4">
         <div>
           <h2 class="text-2xl font-semibold">{{ 'projects.title' | translate }}</h2>
           <p class="mt-0.5 font-mono text-xs tracking-widest opacity-30">{{ 'projects.label' | translate }}</p>
@@ -26,8 +27,8 @@ import type { Project } from '../data/projects';
 
       <!-- Featured projects (with screenshots) -->
       <div class="mt-8 grid gap-6 md:grid-cols-2">
-        @for (project of featuredProjects(); track project.name) {
-          <article class="group overflow-hidden rounded-2xl border border-black/10 bg-white/70 shadow-soft dark:border-white/15 dark:bg-night-800/60">
+        @for (project of featuredProjects(); track project.name; let i = $index) {
+          <article appReveal [delay]="i * 100" class="group overflow-hidden rounded-2xl border border-black/10 bg-white/70 shadow-soft dark:border-white/15 dark:bg-night-800/60">
             <div class="relative">
               <img
                 [src]="selectedImage(project)"
@@ -87,8 +88,9 @@ import type { Project } from '../data/projects';
       <!-- Additional repos (compact cards) -->
       @if (additionalProjects().length) {
         <div class="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-          @for (project of additionalProjects(); track project.name) {
+          @for (project of additionalProjects(); track project.name; let i = $index) {
             <a
+              appReveal [delay]="i * 60"
               [href]="project.repoUrl"
               target="_blank"
               rel="noopener noreferrer"

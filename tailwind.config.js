@@ -25,6 +25,16 @@ module.exports = {
           700: '#991b1b',
         },
       },
+      animation: {
+        float: 'float 7s ease-in-out infinite',
+        'float-slow': 'float 10s ease-in-out infinite',
+      },
+      keyframes: {
+        float: {
+          '0%, 100%': { transform: 'translateY(0) scale(1)' },
+          '50%': { transform: 'translateY(-22px) scale(1.04)' },
+        },
+      },
       boxShadow: {
         soft: '0 10px 25px rgba(0,0,0,0.12)',
         deep: '0 18px 45px rgba(0,0,0,0.24)',

@@ -2,18 +2,21 @@ import { Component, input } from '@angular/core';
 import { TranslateModule } from '@ngx-translate/core';
 
 import type { SocialLink } from '../data/social';
+import { RevealDirective } from '../directives/reveal.directive';
 
 @Component({
   selector: 'app-contact-section',
   standalone: true,
-  imports: [TranslateModule],
+  imports: [TranslateModule, RevealDirective],
   template: `
     <section id="contact" class="mx-auto max-w-6xl px-4 py-16">
-      <h2 class="text-2xl font-semibold">{{ 'contact.title' | translate }}</h2>
-      <p class="mt-0.5 font-mono text-xs tracking-widest opacity-30">{{ 'contact.label' | translate }}</p>
+      <div appReveal>
+        <h2 class="text-2xl font-semibold">{{ 'contact.title' | translate }}</h2>
+        <p class="mt-0.5 font-mono text-xs tracking-widest opacity-30">{{ 'contact.label' | translate }}</p>
+      </div>
 
       <div class="mt-8 grid gap-6 md:grid-cols-2">
-        <article class="rounded-2xl border border-black/10 bg-white/70 p-6 shadow-soft dark:border-white/15 dark:bg-night-800/60">
+        <article appReveal [delay]="100" class="rounded-2xl border border-black/10 bg-white/70 p-6 shadow-soft dark:border-white/15 dark:bg-night-800/60">
           <p class="text-sm font-semibold">{{ 'contact.email' | translate }}</p>
           <a class="mt-2 block text-sm text-ember-600 hover:underline dark:text-ember-500" [href]="mailto()">
             {{ email() }}
@@ -33,7 +36,7 @@ import type { SocialLink } from '../data/social';
           </div>
         </article>
 
-        <article class="rounded-2xl border border-black/10 bg-white/70 p-6 shadow-soft dark:border-white/15 dark:bg-night-800/60">
+        <article appReveal [delay]="200" class="rounded-2xl border border-black/10 bg-white/70 p-6 shadow-soft dark:border-white/15 dark:bg-night-800/60">
           <p class="text-sm font-semibold">{{ 'contact.mailto.title' | translate }}</p>
           <p class="mt-2 text-sm opacity-80">
             {{ 'contact.mailto.description' | translate }}
